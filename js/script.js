@@ -11,13 +11,16 @@ const searchBtn = document.querySelector("#search")
 const cityElement = document.querySelector("#city")
 const tempElement = document.querySelector("#temperature span")
 const descElement = document.querySelector("#description")
-const weatherIconElement = document.querySelector("#weather-icon")
 const countryElement = document.querySelector("#country")
 const humidityElement = document.querySelector("#humidity span")
 const windElement = document.querySelector("#wind span")
 
+const weatherContainer = document.querySelector("#weather-data")
+const error = document.querySelector("#error-message")
+
 
 // Funções
+
 
 const showWeatherData = async(city) => {
     const data = await getWeatherData(city);
@@ -26,11 +29,11 @@ const showWeatherData = async(city) => {
     tempElement.innerText = parseInt(data.main.temp);
     descElement.innerHTML = data.weather[0].description;
     countryElement.setAttribute("src", `https://flagsapi.com/${data.sys.country}/flat/64.png`)
-
     humidityElement.innerHTML = `${data.main.humidity}%`
     windElement.innerHTML = `${data.wind.speed}Km/H`
 
-    console.log(data.weather[0].icon)
+
+    weatherContainer.classList.remove("hide")
 
 }
 
@@ -51,4 +54,12 @@ searchBtn.addEventListener("click", (e) => {
 
     const city =cityInput.value
     showWeatherData(city)
+})
+
+cityInput.addEventListener("keyup", (e) => {
+
+    if (e.code === "Enter"){
+        const city = e.target.value
+        showWeatherData(city);
+    }
 })
