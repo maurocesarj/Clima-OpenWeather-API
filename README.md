@@ -18,3 +18,7 @@
  
 ### Credits
 - This project was created with the OpenWeather API and also with the video lesson on the Matheus Battisti - Hora de Codar channel
+
+![foto](https://user-images.githubusercontent.com/98528661/221371526-379c083b-8856-4e0c-8d4e-4dc26ae2123f.PNG)
+
+
