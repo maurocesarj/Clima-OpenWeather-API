@@ -14,7 +14,7 @@
 
 ### Use
  - Access application through the link
- [Weather OpenWeather API ](https://maurocesarj.github.io/Clima-OpenWeather-API/).
+ [Weather OpenWeather API ](https://maurocesarj.github.io/Weather-OpenWeather-API/).
  
 ### Credits
 - This project was created with the OpenWeather API and also with the video lesson on the Matheus Battisti - Hora de Codar channel
